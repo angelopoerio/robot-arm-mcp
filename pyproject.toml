@@ -1,0 +1,24 @@
+[project]
+name = "robot-arm-mcp"
+version = "0.1.0"
+description = "An MCP server to control a simple robot arm"
+authors = [
+    { name = "Angelo Poerio", email = "angelo.poerio@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "fastmcp>=4.0.11",
+    "pyserial>=3.5",
+]
+
+[project.scripts]
+robot-arm-mcp = "robot_arm_mcp:main"
+
+[build-system]
+requires = ["uv_build>=0.12.23,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "black>=26.10.0",
+]
